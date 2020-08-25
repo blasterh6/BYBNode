@@ -26,9 +26,9 @@
 		<span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-		<a class="navbar-brand" href="#">DocuBloq</a>
+		<a class="navbar-brand" href="index.html">DocuBloq</a>
 		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-		  <li class="nav-item active">
+		  <li class="nav-item">
 			<a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
 		  </li>
 		  <li class="nav-item">
@@ -38,7 +38,7 @@
 			<a class="nav-link " href="verificar.html">Verificar</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link " href="contacto.html">Contacto</a>
+			<a class="nav-link active" href="contacto.html">Contacto</a>
 		  </li>
 		</ul>
 		<form class="form-inline my-2 my-lg-0">
@@ -60,68 +60,102 @@
 		
 		<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb ">
-			<li class="breadcrumb-item active ml-auto" aria-current="page">Inicio</li>
+			<li class="breadcrumb-item ml-auto"><a href="index.html">Inicio</a></li>
 			<li class="breadcrumb-item"><a href="firmar.html">Firmar</a></li>
 			<li class="breadcrumb-item"><a href="verificar.html">Verificar</a></li>
-			<li class="breadcrumb-item"><a href="contacto.html">Contacto</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Contacto</li>
 		  </ol>
 		</nav>
 	
-		<div class="d-flex justify-content-center flex-wrap">
-			<div class="col-sm-3">
-				<h2>Firma</h2>
-				<p>
-					Firma documentos utilizando tu firma electronica avanzada, necesitas unicamente tu certificado, Llave publica y contraseña.
-				</p>
-			</div>
-			<div class="col-sm-3">
-				<h2>Certifica</h2>
-				<p>
-				  Certifica tus documentos firmados utilizando tecnologia de la blockchain.
-				</p>
-			</div>
-			<div class="col-sm-3">
-				<h2>Verifica</h2>
-				<p>
-				  Verifica la autenticidad de cualquier documento firmado.
-				</p>
-			</div>
-		</div>
-		<hr />
-		<div class="d-flex justify-content-center">
-			<h2>¿Que necesito?</h2><br /><br /><br />
-			<span class="iconic iconic-star" title="star" aria-hidden="false"></span>
-		</div>
-		<div class="d-flex justify-content-center flex-wrap">
-			<div class="col-sm-4 d-flex justify-content-between">
-				<div class="card">
-				  <div class="card-body">
-					<h5 class="card-title">Certificado</h5>
-					<p class="card-text">Un certificado *.cer emitido por el servicio de administracion tributaria.</p>
-				  </div>
-				  <div class="card-footer"><a href="https://www.sat.gob.mx/tramites/16703/obten-tu-certificado-de-e.firma-(antes-firma-electronica)" target="_blank" class="btn btn-dark">Saber mas...</a></div>
+		<section class="mb-4">
+
+			<h2 class="h1-responsive font-weight-bold text-center my-4">Contactanos</h2>
+			<p class="text-center w-responsive mx-auto mb-5">Tienes consultas sobre nuestro servicio, no dudes en escribirnos.</p>
+
+			<div class="row">
+				<div class="col-md-9 mb-md-0 mb-5">
+					<form id="contacto" name="contacto" action="#" method="POST">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="md-form mb-0">
+									<label for="name" class="">Nombre</label>
+									<input type="text" id="name" name="name" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="md-form mb-0">
+									<label for="email" class="">Correo electronico</label>
+									<input type="text" id="email" name="email" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="md-form mb-0">
+									<label for="subject" class="">Asunto</label>
+									<input type="text" id="subject" name="subject" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+
+							<div class="col-md-12">
+								<div class="md-form">
+									<label for="message">Tu mensaje</label>
+									<textarea type="text" id="message" name="message" rows="5" class="form-control md-textarea"></textarea>
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<label for="how">¿Como nos conociste?</label>
+								<select id="how" name="how" class="form-control">
+									<option selected>Google</option>
+									<option>Facebook</option>
+								</select>
+							</div>
+						</div><br />
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-check">
+								  <input type="checkbox" class="form-check-input" name="updates" id="updates" value="1">
+								  <label for="updates" class="form-check-label">Recibir noticias sobre actualizaciones</label>
+								</div>
+							</div>
+						</div>
+						<br />
+						<div class="text-center text-md-left">
+							<a class="btn btn-dark" type="submit">Enviar</a>
+						</div>
+						<div class="status"></div>
+					</form>
+
+					
 				</div>
-			</div>
-			<div class="col-sm-4 d-flex justify-content-between">
-				<div class="card">
-				  <div class="card-body">
-					<h5 class="card-title">llave Publica</h5>
-					<p class="card-text">la llave *.Key generada para el certificado en cuestion.</p>
-				  </div>
-				  <div class="card-footer"><a href="https://www.sat.gob.mx/aplicacion/16660/genera-y-descarga-tus-archivos-a-traves-de-la-aplicacion-certifica" target="_blank" class="btn btn-dark">Saber mas...</a></div>
+
+				<div class="col-md-3 text-center">
+					<ul class="list-unstyled mb-0">
+						<li><i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
+							<p>795 Folsom Ave, Suite 600.</p>
+							<p>San Francisco, CA 94107, USA.</p>
+						</li>
+
+						<li><i class="fa fa-phone mt-4 fa-3x"></i>
+							<p>+ 01 (804) 123-5432</p>
+						</li>
+
+						<li><i class="fa fa-envelope mt-4 fa-3x"></i>
+							<p>info@bloqandbloq.com</p>
+						</li>
+					</ul>
 				</div>
+				<!--Grid column-->
+
 			</div>
-			
-			<div class="col-sm-4 d-flex justify-content-between">
-				<div class="card">
-				  <div class="card-body">
-					<h5 class="card-title">Contraseña</h5>
-					<p class="card-text">la contraseña del certificado para la generacion del sello digital.</p>
-				  </div>
-				  <div class="card-footer"><a href="https://www.sat.gob.mx/tramites/38517/generacion-y-actualizacion-de-contrasena-para-persona-fisica" target="_blank" class="btn btn-dark">Saber mas...</a></div>
-				</div>
-			</div>
-		</div>
+
+		</section>
+		<!--Section: Contact v.2-->
 		
 		
     </div>

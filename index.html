@@ -27,10 +27,10 @@
 			<a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">Firmar</a>
+			<a class="nav-link" href="firmar.html">Firmar</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link " href="#">Verificar</a>
+			<a class="nav-link " href="verificar.html">Verificar</a>
 		  </li>
 		  <li class="nav-item">
 			<a class="nav-link " href="contacto.html">Contacto</a>
@@ -104,7 +104,7 @@
 			<h2>¿Que necesito?</h2><br /><br /><br />
 		</div>
 		<div class="d-flex justify-content-center flex-wrap">
-			<div class="col-sm-4 d-flex justify-content-between">
+			<div class="col-sm-4 d-flex justify-content-between" data-toggle="tooltip" data-placement="top" title="Archivo *.CER proporcionado por el SAT con tu RFC">
 				<div class="card">
 				  <div class="card-body">
 					<h5 class="card-title">Certificado</h5>
@@ -113,7 +113,7 @@
 				  <div class="card-footer"><a href="https://www.sat.gob.mx/tramites/16703/obten-tu-certificado-de-e.firma-(antes-firma-electronica)" target="_blank" class="btn btn-dark">Saber mas...</a></div>
 				</div>
 			</div>
-			<div class="col-sm-4 d-flex justify-content-between">
+			<div class="col-sm-4 d-flex justify-content-between" data-toggle="tooltip" data-placement="top" title="Archivo *.KEY proporcionado por el SAT para desencriptar tu certificado">
 				<div class="card">
 				  <div class="card-body">
 					<h5 class="card-title">llave Publica</h5>
@@ -123,7 +123,7 @@
 				</div>
 			</div>
 			
-			<div class="col-sm-4 d-flex justify-content-between">
+			<div class="col-sm-4 d-flex justify-content-between" data-toggle="tooltip" data-placement="top" title="Contraseña unica que generaste durante el tramite.">
 				<div class="card">
 				  <div class="card-body">
 					<h5 class="card-title">Contraseña</h5>
@@ -178,12 +178,72 @@
 	<div class="d-flex justify-content-center">
 		<h5>Somos miembros de IJALTI Cluster.</h5><br />
 	</div>
-	<div class="">
+	<div class="d-flex justify-content-center">
+		<button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#promocion" aria-controls="promocion" aria-expanded="false" aria-label="Ver promos">Ver Promociones</button>
+	</div>
+	<div class="collapse" id="promocion">
 	  <img class="d-block w-100 img-fluid" src="img/talent.png" alt="Ijalti">
+	  <div class="d-flex justify-content-center">
+		<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalpromo">
+			Solicitar mas informacion sobre la promocion.
+		</button>
+	  </div>
+	 
 	</div>
 	<br /><br /><br /><br />
     </div><!-- div container-->
 	
+	<!-- Modal -->
+	<div class="modal fade" id="modalpromo" tabindex="-1" role="dialog" aria-labelledby="modalpromo" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLongTitle">Solicitar informacion al IJALTI</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			
+			<form id="contacto" name="contacto" action="#" method="POST">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="md-form mb-0">
+							<label for="name" class="">Nombre</label>
+							<input type="text" id="name" name="name" class="form-control">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="md-form mb-0">
+							<label for="email" class="">Correo electronico</label>
+							<input type="text" id="email" name="email" class="form-control">
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-12">
+						<label for="info">¿Que informacion quieres recibir?</label>
+						<select id="info" name="info" class="form-control">
+							<option selected>¿Cupos del evento?</option>
+							<option>¿precio del evento?</option>
+							<option>¿Fecha del evento?</option>
+							<option>¿Condiciones del evento?</option>
+						</select>
+					</div>
+			</form>
+	
+			
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+			<button type="button" class="btn btn-dark">Enviar</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
     
 	
   </body>
@@ -193,6 +253,13 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	
+	<!-- TOOLTIP -->
+	<script>
+		$(function () {
+		  $('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
 	
 	<!-- Footer -->
 	<footer class="bg-dark text-white">

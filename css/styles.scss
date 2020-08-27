@@ -1,0 +1,22 @@
+$yellow: #a8a632;
+$red: #b30000;
+$green: #004d00;
+
+@mixin margenes($t, $b){
+    margin-top: $t;
+    margin-bottom: $b;
+}
+
+.jumbotron{
+    background-color: $yellow;
+    @include margenes(0px, 32px);
+}
+
+.btn-promo{
+    background-color: $green !important;
+    color: white;
+}
+
+.btn-vermas{
+    background-color: $red !important;
+}
